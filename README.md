@@ -30,10 +30,3 @@ A diferencia de un shot chart convencional, este visualizador implementa un sist
 
 ## 📝 Nota Técnica: ¿Por qué Hexágonos Híbridos?
 En el análisis de datos moderno, el volumen sin eficiencia es engañoso. Un hexágono grande y rojo indica una zona de ineficiencia (muchos tiros, pocos aciertos), mientras que uno pequeño y verde indica una zona de alta eficiencia pero baja frecuencia. Este proyecto permite identificar de un vistazo la verdadera "zona de confort" de un jugador.
-
-## 🔧 Instalación y Uso
-
-1. **Clonar el repositorio:**
-   ```bash
-   git clone [https://github.com/TU_USUARIO/nba-shot-charts-visualizer.git](https://github.com/TU_USUARIO/nba-shot-charts-visualizer.git)
-   cd nba-shot-charts-visualizer
