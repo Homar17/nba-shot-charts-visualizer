@@ -4,28 +4,39 @@
 ![License](https://img.shields.io/badge/License-MIT-green.svg)
 
 ## 📌 Descripción
-Este proyecto es una herramienta de análisis de datos deportivos que extrae coordenadas de tiro en tiempo real desde la **API oficial de la NBA** y genera visualizaciones avanzadas (**Shot Charts**). 
+Este proyecto es una herramienta avanzada de análisis de datos deportivos que transforma datos crudos de la **API oficial de la NBA** en visualizaciones de alto impacto. 
 
-El objetivo es transformar datos crudos de coordenadas $X$ e $Y$ en mapas de calor y gráficos de dispersión que permitan entender el comportamiento ofensivo y la eficiencia de los jugadores de la liga.
+A diferencia de un shot chart convencional, este visualizador implementa un sistema de **Mapas Híbridos**, permitiendo analizar simultáneamente la **frecuencia de tiro** y la **eficiencia** del jugador en un solo gráfico.
 
-## 🚀 Características
-- 🔍 **Búsqueda Dinámica:** Obtención de datos de cualquier jugador activo o histórico mediante la `nba_api`.
-- 🏟️ **Cancha de Precisión:** Generación de una media cancha de la NBA con medidas oficiales mediante `Matplotlib`.
-- 📊 **Análisis de Eficiencia:** Visualización diferenciada entre tiros encestados y fallados.
-- 📂 **Exportación:** Capacidad de guardar las visualizaciones en alta calidad (PNG/PDF).
+## 🚀 Características Avanzadas
+- 🧬 **Hexágonos Híbridos:** Visualización de doble variable donde el **tamaño** del hexágono representa el volumen de tiros y el **color** representa la efectividad (%).
+- ⚔️ **Modo Comparativa:** Generación de gráficos "Cara a Cara" (Side-by-Side) para contrastar estilos de juego de diferentes jugadores o épocas.
+- 🎨 **Estética Profesional:** Interfaz diseñada en modo oscuro (Gris Carbón `#333333`) para maximizar el contraste de los datos.
+- 🖼️ **Headshot Integration:** Integración dinámica de fotos oficiales de los jugadores mediante procesamiento de imágenes con `Pillow`.
+- 📏 **Cancha Geométrica:** Recreación precisa de la duela de la NBA basada en el sistema de coordenadas de la API.
+
+## 📊 Visualización Ejemplo
+![Comparativa de Tiros](shotchart_comparison.png)
+*(Sube aquí tu imagen generada con el nombre 'shotchart_comparison.png')*
 
 ## 🛠️ Tecnologías Utilizadas
-* **Lenguaje:** Python
 * **Extracción de Datos:** [nba_api](https://github.com/swar/nba_api)
-* **Manipulación de Datos:** Pandas
-* **Visualización:** Matplotlib & Seaborn
+* **Procesamiento de Datos:** `Pandas` & `NumPy`
+* **Visualización:** `Matplotlib` (Uso avanzado de Patches y RegularPolygons)
+* **Manejo de Imágenes:** `Pillow` (PIL)
+
+## 📂 Estructura del Proyecto
+- `src/fetcher.py`: Lógica de extracción y filtrado de datos de la API.
+- `src/court.py`: Definición geométrica de la cancha.
+- `src/main.py`: Orquestador principal y lógica de renderizado híbrido.
+
+
+## 📝 Nota Técnica: ¿Por qué Hexágonos Híbridos?
+En el análisis de datos moderno, el volumen sin eficiencia es engañoso. Un hexágono grande y rojo indica una zona de ineficiencia (muchos tiros, pocos aciertos), mientras que uno pequeño y verde indica una zona de alta eficiencia pero baja frecuencia. Este proyecto permite identificar de un vistazo la verdadera "zona de confort" de un jugador.
 
 ## 🔧 Instalación y Uso
-*(Próximamente...)*
 
-```bash
-# Clonar el repositorio
-git clone [https://github.com/TU_USUARIO/nba-shot-charts-visualizer.git](https://github.com/TU_USUARIO/nba-shot-charts-visualizer.git)
-
-# Instalar dependencias
-pip install -r requirements.txt
+1. **Clonar el repositorio:**
+   ```bash
+   git clone [https://github.com/TU_USUARIO/nba-shot-charts-visualizer.git](https://github.com/TU_USUARIO/nba-shot-charts-visualizer.git)
+   cd nba-shot-charts-visualizer
