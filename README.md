@@ -15,9 +15,6 @@ A diferencia de un shot chart convencional, este visualizador implementa un sist
 - 🖼️ **Headshot Integration:** Integración dinámica de fotos oficiales de los jugadores mediante procesamiento de imágenes con `Pillow`.
 - 📏 **Cancha Geométrica:** Recreación precisa de la duela de la NBA basada en el sistema de coordenadas de la API.
 
-## 📊 Visualización Ejemplo
-![Comparativa de Tiros](shotchart_comparison.png)
-*(Sube aquí tu imagen generada con el nombre 'shotchart_comparison.png')*
 
 ## 🛠️ Tecnologías Utilizadas
 * **Extracción de Datos:** [nba_api](https://github.com/swar/nba_api)
